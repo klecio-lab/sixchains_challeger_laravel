@@ -60,3 +60,18 @@ http://localhost:8000/api
 ```
 
 ---
+
+
+## 6. Caso dê esse erro:
+
+```
+    "message": "SQLSTATE[08006] [7] Connection refused\n\tIs the server running on that host and accepting TCP/IP connections? (Connection: pgsql, SQL: select * from \"users\" where \"email\" = kleciohenrique18@gmail.com limit 1
+```
+
+execute o seguinte comando:
+
+```
+    sudo systemctl stop postgresql
+```
+
+---

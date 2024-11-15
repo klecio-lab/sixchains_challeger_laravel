@@ -14,7 +14,7 @@ class TaskController extends Controller
     // Lista as tarefas do usuário autenticado
     public function index()
     {
-        $tasks = Auth::user()->task;
+        $tasks = Auth::user()->task()->orderBy('id', 'asc')->get();
         return response()->json([
             'success' => true,
             'data' => $tasks
